@@ -1,7 +1,6 @@
 class RepositoriesController < ApplicationController
-
   def create
-    repositories = CreateRepositoriesService.new(params[:username]).call
+    repositories = CreateRepositoriesJob.perform_now(params[:username])
 
     render json: repositories, status: 200
   end

@@ -1,24 +1,27 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Environment
 
-Things you may want to cover:
+* Ruby 2.7.2
+* Ruby on Rails 7.0.4
+* MongoDB 4.2.23
+* Redis 5.0.7
+* YARN
 
-* Ruby version
+### Starting project
 
-* System dependencies
+Run redis server
+```
+/etc/init.d/redis-server start
+```
+Run mongodb server
+```
+sudo systemctl start mongod
+```
 
-* Configuration
+### Api endpoint
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+```
+localhost:3000/repositories
+```
+Pass username in form-data.
